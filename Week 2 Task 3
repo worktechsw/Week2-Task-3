@@ -1,0 +1,28 @@
+# Guess the Number Generator game
+# Extending to let the player know if they are too high or low
+import random
+print("Hello, Im a little bored, Would you like to play a game with me?")
+print()
+myname=input ("Thats great, What is your name?")
+number=random.randint (1,10)
+print()
+def main ():
+    guesses=1
+    print ("Well,"  + myname +  " I am thinking of a number between 1 and 10, Can you guess my number on the first try?")
+    print()
+    while guesses<7:
+          guess=int (input ("Take a guess?"))
+          print()
+          if guess == number:
+            print ("Good Job" +myname+ " You guessed my number")
+            print()
+            print ("Thank you for playing")
+            break
+          if guess <number:
+            print("Sorry, Your guess is too low, Try Higher")
+            print()
+          if guess>number:
+            print("Sorry, Your guess is too high, Try lower")
+            print()
+          guesses=guesses+1
+main()
